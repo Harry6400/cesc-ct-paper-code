@@ -1,0 +1,29 @@
+{
+  "seed": 123456,
+  "micro_batch": 4,
+  "accumulation": 4,
+  "effective_batch": 32,
+  "world_size": 2,
+  "cpu_threads": 2,
+  "lr": 0.0001,
+  "min_lr": 2e-05,
+  "weight_decay": 0.0,
+  "val_interval": 30,
+  "epochs": 20,
+  "stage": "statistics",
+  "variant": "full",
+  "probe_epochs": [],
+  "model": {
+    "s_ct": 22.299220188880145,
+    "hu_center": 1024.0,
+    "hu_scale": 2048.0,
+    "stats_width": 24,
+    "energy_width": 32,
+    "plain_width": 40
+  },
+  "manifest_path": "data/mayo_manifest.json",
+  "fixed_b0_checkpoint": "weights/b0_e190_deployment.pt",
+  "fixed_b0_deployment_sha256": "058a9243ee6f720c33ed6d7ea6f566497288ba9a480332340fad2d9fb88fe586",
+  "fixed_b0_training_sha256": "3f869695da0a6da3f5e1143fe509d6bc184ac779b8e62e8f50c55e78c0e2680e",
+  "pixel_audit_dir": "outputs/pixel_access/statistics"
+}

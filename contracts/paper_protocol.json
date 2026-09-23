@@ -1,0 +1,12 @@
+{
+  "schema": "cesc_ct_v31_public_paper_protocol_v1",
+  "dataset": "Mayo 3 mm B30, paired quarter-dose/full-dose",
+  "split": "six training, three validation, one locked test patient",
+  "backbone": "frozen five-slice E07-origin B0, validation-best epoch 190",
+  "fixed_b0_deployment_sha256": "058a9243ee6f720c33ed6d7ea6f566497288ba9a480332340fad2d9fb88fe586",
+  "statistics_epochs": 20,
+  "correction_epochs": 200,
+  "global_effective_batch": 32,
+  "training_runtime": "two-rank NCCL DDP, FP32",
+  "selection": "validation only; no locked-test model selection"
+}

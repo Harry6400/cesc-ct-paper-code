@@ -1,0 +1,29 @@
+{
+  "seed": 123456,
+  "micro_batch": 4,
+  "accumulation": 2,
+  "cpu_threads": 2,
+  "lr": 0.0001,
+  "min_lr": 2e-05,
+  "weight_decay": 0.0,
+  "val_interval": 1,
+  "epochs": 2,
+  "stage": "correction",
+  "variant": "full",
+  "probe_epochs": [
+    1,
+    2
+  ],
+  "model": {
+    "s_ct": 22.299,
+    "stats_width": 4,
+    "energy_width": 4,
+    "plain_width": 6,
+    "feature_channels": 2
+  },
+  "bridge_config": {
+    "size": 16,
+    "train_count": 8,
+    "val_count": 3
+  }
+}

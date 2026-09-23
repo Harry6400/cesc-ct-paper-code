@@ -1,0 +1,232 @@
+{
+  "intensity_domain": {
+    "clip_hu": [
+      -1024,
+      3072
+    ],
+    "model_range": [
+      -1,
+      1
+    ]
+  },
+  "records": [
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L067",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L067.npy",
+      "fd_path": "data/volumes/full_3mm/L067.npy",
+      "shape_qd": [
+        224,
+        512,
+        512
+      ],
+      "shape_fd": [
+        224,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.6640625,
+        0.6640625
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L096",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L096.npy",
+      "fd_path": "data/volumes/full_3mm/L096.npy",
+      "shape_qd": [
+        330,
+        512,
+        512
+      ],
+      "shape_fd": [
+        330,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.7421875,
+        0.7421875
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L109",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L109.npy",
+      "fd_path": "data/volumes/full_3mm/L109.npy",
+      "shape_qd": [
+        128,
+        512,
+        512
+      ],
+      "shape_fd": [
+        128,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.78125,
+        0.78125
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L143",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L143.npy",
+      "fd_path": "data/volumes/full_3mm/L143.npy",
+      "shape_qd": [
+        234,
+        512,
+        512
+      ],
+      "shape_fd": [
+        234,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.8203125,
+        0.8203125
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L192",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L192.npy",
+      "fd_path": "data/volumes/full_3mm/L192.npy",
+      "shape_qd": [
+        240,
+        512,
+        512
+      ],
+      "shape_fd": [
+        240,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.703125,
+        0.703125
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L286",
+      "role": "train",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L286.npy",
+      "fd_path": "data/volumes/full_3mm/L286.npy",
+      "shape_qd": [
+        210,
+        512,
+        512
+      ],
+      "shape_fd": [
+        210,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.6640625,
+        0.6640625
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L291",
+      "role": "val",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L291.npy",
+      "fd_path": "data/volumes/full_3mm/L291.npy",
+      "shape_qd": [
+        343,
+        512,
+        512
+      ],
+      "shape_fd": [
+        343,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.7421875,
+        0.7421875
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L310",
+      "role": "val",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L310.npy",
+      "fd_path": "data/volumes/full_3mm/L310.npy",
+      "shape_qd": [
+        214,
+        512,
+        512
+      ],
+      "shape_fd": [
+        214,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.7421875,
+        0.7421875
+      ]
+    },
+    {
+      "dataset": "mayo_3mm_b30",
+      "patient_id": "L333",
+      "role": "val",
+      "kernel": "B30f",
+      "qd_path": "data/volumes/quarter_3mm/L333.npy",
+      "fd_path": "data/volumes/full_3mm/L333.npy",
+      "shape_qd": [
+        244,
+        512,
+        512
+      ],
+      "shape_fd": [
+        244,
+        512,
+        512
+      ],
+      "spacing_source": "dicom_positions",
+      "spacing_zyx_mm": [
+        2.0,
+        0.78125,
+        0.78125
+      ]
+    }
+  ],
+  "schema": "rodiff_ct_mayo_manifest_development_v1",
+  "note": "Example paths only. Replace with local, licensed Mayo HU volumes; do not use this example as a provenance attestation."
+}
