@@ -9,7 +9,7 @@ from .data import seed_from
 
 
 def region_metrics(pred, target):
-    # Exact v10s/v10t region definitions, not the external campaign's 240/50 thresholds.
+    # Frozen native region definitions: density >= 200 HU and top-decile body gradients.
     target = target.float()
     error = pred.float()-target
     body, dense = target >= -900, target >= 200

@@ -22,7 +22,7 @@ def _gaussian_window(size: int, sigma: float, device: torch.device) -> torch.Ten
 
 
 def _ssim(x: torch.Tensor, y: torch.Tensor) -> float:
-    """The exact local Gaussian-window SSIM used by the v10n LIDC parent."""
+    """Local Gaussian-window SSIM retained from the frozen native metric code."""
     x, y = x.float(), y.float()
     window = _gaussian_window(11, 1.5, x.device)
     mu_x = F.conv2d(x, window, padding=5)

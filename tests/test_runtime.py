@@ -9,8 +9,8 @@ from cesc.model import CESC
 from cesc.audit import optimizer_coverage,module_sha256
 from cesc.losses import reconstruction_loss
 from cesc.runner import run,native_gate
-from cesc.bridge import Batch
-from bridges.native_template import NativeBridge
+from cesc.bridge import Batch, Bridge
+from bridges.native_e07_b0 import NativeE07B0Bridge
 from scripts.run_ddp import merge_validation_results
 
 
@@ -76,8 +76,8 @@ def test_optimizer_coverage(cfg):
     bad=torch.optim.Adam(list(m.correction.parameters())[:1])
     with pytest.raises(RuntimeError):optimizer_coverage(m,bad)
 
-def test_native_stub_fails_honestly():
-    with pytest.raises(NotImplementedError):NativeBridge({})
+def test_native_bridge_imports_with_frozen_backbone():
+    assert issubclass(NativeE07B0Bridge, Bridge)
 
 def test_native_gate_rejects_unauthorized():
     with pytest.raises(RuntimeError):native_gate({'source':'NATIVE'}, {},False,None)

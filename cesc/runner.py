@@ -143,7 +143,7 @@ def run(config,bridge_spec,outdir,device='cpu',stats_checkpoint=None,resume=None
 
 def main():
     p=argparse.ArgumentParser(description=__doc__)
-    p.add_argument('--config',required=True);p.add_argument('--bridge',default='bridges.native_template:NativeBridge')
+    p.add_argument('--config',required=True);p.add_argument('--bridge',required=True)
     p.add_argument('--out',required=True);p.add_argument('--device',default='cpu')
     p.add_argument('--stats-checkpoint');p.add_argument('--resume')
     p.add_argument('--authorize-patient-training',action='store_true');p.add_argument('--preflight-report')

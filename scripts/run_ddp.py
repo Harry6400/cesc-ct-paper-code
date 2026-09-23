@@ -183,7 +183,7 @@ def main():
     rank, world = dist.get_rank(), dist.get_world_size()
     local_rank = int(os.environ["LOCAL_RANK"])
     if world != 2:
-        raise RuntimeError("v31 E51 contract requires exactly two DDP ranks")
+        raise RuntimeError("paper training protocol requires exactly two DDP ranks")
     torch.cuda.set_device(local_rank)
     device = torch.device(f"cuda:{local_rank}")
     torch.backends.cuda.matmul.allow_tf32 = False

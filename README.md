@@ -28,11 +28,33 @@ numbers. Synthetic runs test software wiring only and are not medical results.
 - `data/mayo_manifest.example.json` and `configs/*.example.json`: path templates,
   not data or executable evidence.
 
+## Version names in the frozen backbone
+
+`v31` identifies the CESC-CT correction method in `cesc/`. Its frozen B0
+backbone was produced earlier, so the checkpoint loader retains the original
+`ct_v29` and `ct_v29_prod` Python package names and
+`rodiff_ct_v29_deployment_v1` checkpoint schema. These names identify the
+**B0 checkpoint format**, not an additional CESC-CT method or a second paper
+version. Renaming them would obscure the provenance of the required frozen
+checkpoint. `E07` in `native_e07_b0.py` identifies that B0's source run;
+`E190` identifies its validation-selected epoch.
+
+The legacy A/B variants present inside `ct_v29` belong to the frozen
+backbone's original implementation. They are unrelated to this paper's
+Plain, Diagonal, and Full correction controls. The release keeps the native
+modules needed to instantiate the exact B0 architecture and load its
+checkpoint; its historical training, probe, and audit entry points are not
+part of this paper-code package. Some legacy schema and metric identifiers
+inside the retained native modules remain unchanged to preserve the original
+data and checkpoint contracts. The paper workflow uses the Mayo development
+split described below and makes no LIDC result claim.
+
 ## Environment and software smoke test
 
 Use Python 3.10 or newer and install a PyTorch build suitable for the local
-hardware. The formal runner requires two CUDA GPUs with NCCL; the synthetic
-smoke test runs on CPU. From this repository's root:
+hardware. Run commands from this repository checkout; it is not distributed
+as a standalone wheel. The formal runner requires two CUDA GPUs with NCCL;
+the synthetic smoke test runs on CPU. From this repository's root:
 
 ```bash
 python -m pip install -r requirements.txt
